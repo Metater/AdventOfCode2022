@@ -18,7 +18,7 @@ public class Day2P2 : Day
         // 3 scissors
         // plus 0 loss, 3 draw, 6 won
 
-        // Time: 18:42.66
+        // Time: 18:42.66 + 10m28s
 
         int score = 0;
 
