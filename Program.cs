@@ -2,5 +2,5 @@
 
 Console.WriteLine("Hello, World!");
 
-new Day2P1().RunWithInput(2);
-new Day2P2().RunWithInput(2);
+new Day3P1().RunWithInput(3);
+new Day3P2().RunWithInput(3);
