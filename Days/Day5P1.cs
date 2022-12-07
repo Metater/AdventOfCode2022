@@ -13,8 +13,9 @@ public class Day5P1 : Day
     {
         List<List<string>> stacks = new();
 
+        input.Reverse();
         bool hasStacksStarted = false;
-        foreach (var line in input.Reverse())
+        foreach (var line in input)
         {
             if (!hasStacksStarted)
             {
