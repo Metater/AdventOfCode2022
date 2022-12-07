@@ -19,22 +19,22 @@ public class Day4P2 : Day
             //Console.WriteLine($"eA: {endA}");
             //Console.WriteLine($"sB: {startB}");
             //Console.WriteLine($"eB: {endB}");
-            if (startA >= startB && endA <= startB) // Is start B in the range of A whatsoever
+            if (startA >= startB && endA >= startB) // Is start B in the range of A whatsoever
             {
                 //Console.WriteLine("A");
                 count++;
             }
-            if (startA >= endB && endA <= endB) // Is end B in the range of A whatsoever
+            if (startA >= endB && endA >= endB) // Is end B in the range of A whatsoever
             {
                 //Console.WriteLine("A");
                 count++;
             }
-            else if (startB >= startA && endB <= startA) // Is start A in the range of B whatsoever
+            else if (startB >= startA && endB >= startA) // Is start A in the range of B whatsoever
             {
                 //Console.WriteLine("B");
                 count++;
             }
-            else if (startB >= endA && endB <= endA) // Is end A in the range of B whatsoever
+            else if (startB >= endA && endB >= endA) // Is end A in the range of B whatsoever
             {
                 //Console.WriteLine("B");
                 count++;
