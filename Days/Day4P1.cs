@@ -18,7 +18,7 @@ public class Day4P1 : Day
             {
                 count++;
             }
-            if (startB >= startA && endB >= endA) // Does B fully contain A?
+            else if (startB >= startA && endB >= endA) // Does B fully contain A?
             {
                 count++;
             }
