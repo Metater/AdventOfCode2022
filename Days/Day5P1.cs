@@ -29,7 +29,7 @@ public class Day5P1 : Day
 
             if (line.Trim()[0] == '1') // crate numbers
             {
-                int crateCount = line.Split(' ', StringSplitOptions.TrimEntries & StringSplitOptions.RemoveEmptyEntries);
+                int crateCount = line.Split(' ', StringSplitOptions.TrimEntries & StringSplitOptions.RemoveEmptyEntries).Length;
                 Console.WriteLine(crateCount);
             }
             else // crates
