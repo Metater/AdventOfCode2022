@@ -24,7 +24,7 @@ public class Day4P2 : Day
                 //Console.WriteLine("A");
                 count++;
             }
-            if (startA >= endB && endA >= endB) // Is end B in the range of A whatsoever
+            else if (startA >= endB && endA >= endB) // Is end B in the range of A whatsoever
             {
                 //Console.WriteLine("A");
                 count++;
