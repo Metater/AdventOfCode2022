@@ -11,7 +11,7 @@ public class Day6P1 : Day
         for (int i = 0; i < buffer.Length - 3; i++)
         {
             string marker = buffer.Substring(i, 4);
-            Console.WriteLine(marker);
+            //Console.WriteLine(marker);
             List<char> uniqueChars = new();
             bool markerValid = true;
             foreach (var c in marker)
