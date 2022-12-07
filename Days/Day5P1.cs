@@ -9,7 +9,7 @@ public class Day5P1 : Day
 
     private List<List<string>> GetStacks(List<string> input)
     {
-
+        return null;
     }
 
     private List<(int crate, int from, int to)> GetProcedure(List<string> input)
