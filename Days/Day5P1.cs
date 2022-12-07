@@ -19,7 +19,7 @@ public class Day5P1 : Day
         bool hasProcedureStarted = false;
         foreach (var line in input)
         {
-            if (!hasProcedureStarted))
+            if (!hasProcedureStarted)
             {
                 if (string.IsNullOrEmpty(line))
                 {
