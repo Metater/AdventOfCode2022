@@ -5,23 +5,36 @@ public class Day5P1 : Day
     public override void Run(List<string> input)
     {
         var stacks = GetStacks(input);
+        var procedure = GetProcedure(input);
+
+        foreach (var instruction in procedure)
+        {
+            int amount = instruction.amount;
+            int from = instruction.from;
+            int to = instruction.to;
+
+            var fromStack = stacks[from - 1];
+            var toStack = stacks[to - 1];
+            for (int i = 0; i < amount; i++)
+            {
+                toStack.Add(fromStack.Last());
+                fromStack.RemoveAt(fromStack.Length - 1);
+            }
+        }
+
+        StringBuilder answer = new();
         foreach (var stack in stacks)
         {
-            foreach (var crate in stack)
-            {
-                Console.WriteLine(crate);
-            }
-            Console.WriteLine("-------------");
+            answer.Append(stack.Last());
         }
-        
-        var procedure = GetProcedure(input);
+        Console.WriteLine(answer);
     }
 
     private List<List<char>> GetStacks(List<string> input)
     {
         List<List<char>> stacks = new();
 
-        int crateCount = -1;
+        int stackCount = -1;
         bool hasStacksStarted = false;
         input.Reverse();
         foreach (var line in input)
@@ -38,20 +51,23 @@ public class Day5P1 : Day
 
             if (line.Trim()[0] == '1') // crate numbers
             {
-                crateCount = line.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
-                for (int i = 0; i < crateCount; i++)
+                stackCount = line.Split(' ', StringSplitOptions.RemoveEmptyEntries).Length;
+                for (int i = 0; i < stackCount; i++)
                 {
                     stacks.Add(new());
                 }
             }
             else // crates
             {
-                for (int i = 0; i < crateCount; i++)
+                for (int i = 0; i < stackCount; i++)
                 {
                     // 1, 5, 9, 13
                     int index = ((i * 5) - i) + 1;
                     char c = line[index];
-                    stacks[i].Add(c);
+                    if (c != ' ')
+                    {
+                        stacks[i].Add(c);
+                    }
                 }
             }
         }
@@ -59,9 +75,9 @@ public class Day5P1 : Day
         return stacks;
     }
 
-    private List<(int crate, int from, int to)> GetProcedure(List<string> input)
+    private List<(int amount, int from, int to)> GetProcedure(List<string> input)
     {
-        List<(int crate, int from, int to)> procedure = new();
+        List<(int amount, int from, int to)> procedure = new();
         
         bool hasProcedureStarted = false;
         foreach (var line in input)
