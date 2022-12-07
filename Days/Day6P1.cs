@@ -29,7 +29,8 @@ public class Day6P1 : Day
             }
             if (markerValid)
             {
-                Console.WriteLine(i);
+                Console.WriteLine(i + 4);
+                break;
             }
         }
     }
