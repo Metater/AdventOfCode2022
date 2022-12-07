@@ -13,8 +13,8 @@ public class Day5P1 : Day
     {
         List<List<string>> stacks = new();
 
-        input.Reverse();
         bool hasStacksStarted = false;
+        input.Reverse();
         foreach (var line in input)
         {
             if (!hasStacksStarted)
@@ -37,6 +37,7 @@ public class Day5P1 : Day
 
             }
         }
+        input.Reverse();
         return stacks;
     }
 
