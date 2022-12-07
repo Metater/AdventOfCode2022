@@ -19,12 +19,12 @@ public class Day4P1 : Day
             Console.WriteLine($"eA: {endA}");
             Console.WriteLine($"sB: {startB}");
             Console.WriteLine($"eB: {endB}");
-            if (startA >= startB && endA >= endB) // Does A fully contain B?
+            if (startA >= startB && endA <= endB) // Does A fully contain B?
             {
                 Console.WriteLine("A");
                 count++;
             }
-            else if (startB >= startA && endB >= endA) // Does B fully contain A?
+            else if (startB >= startA && endB <= endA) // Does B fully contain A?
             {
                 Console.WriteLine("B");
                 count++;
