@@ -8,7 +8,7 @@ public class Day6P1 : Day
         // Find start of packet marker
         // Indicated by 4 unique characters
         string buffer = input[0];
-        for (int i = 0; i < buffer.Length - 5; i++)
+        for (int i = 0; i < buffer.Length - 3; i++)
         {
             string marker = buffer.Substring(i, 4);
             Console.WriteLine(marker);
