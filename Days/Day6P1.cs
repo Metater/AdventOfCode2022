@@ -27,6 +27,10 @@ public class Day6P1 : Day
                     break;
                 }
             }
+            if (markerValid)
+            {
+                Console.WriteLine(i);
+            }
         }
     }
 }
