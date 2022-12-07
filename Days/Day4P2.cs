@@ -7,7 +7,7 @@ public class Day4P2 : Day
         int count = 0;
         foreach (var line in input)
         {
-            Console.WriteLine(line);
+            //Console.WriteLine(line);
             string[] pair = line.Split(',');
             string[] a = pair[0].Split('-');
             string[] b = pair[1].Split('-');
@@ -15,31 +15,31 @@ public class Day4P2 : Day
             int endA = int.Parse(a[1]);
             int startB = int.Parse(b[0]);
             int endB = int.Parse(b[1]);
-            Console.WriteLine($"sA: {startA}");
-            Console.WriteLine($"eA: {endA}");
-            Console.WriteLine($"sB: {startB}");
-            Console.WriteLine($"eB: {endB}");
+            //Console.WriteLine($"sA: {startA}");
+            //Console.WriteLine($"eA: {endA}");
+            //Console.WriteLine($"sB: {startB}");
+            //Console.WriteLine($"eB: {endB}");
             if (startA <= startB && endA >= startB) // Is start B in the range of A whatsoever
             {
-                Console.WriteLine("1");
+                //Console.WriteLine("1");
                 count++;
             }
             else if (startA <= endB && endA >= endB) // Is end B in the range of A whatsoever
             {
-                Console.WriteLine("2");
+                //Console.WriteLine("2");
                 count++;
             }
             else if (startB <= startA && endB >= startA) // Is start A in the range of B whatsoever
             {
-                Console.WriteLine("3");
+                //Console.WriteLine("3");
                 count++;
             }
             else if (startB <= endA && endB >= endA) // Is end A in the range of B whatsoever
             {
-                Console.WriteLine("4");
+                //Console.WriteLine("4");
                 count++;
             }
-            Console.WriteLine();
+            //Console.WriteLine();
         }
         Console.WriteLine(count);
     }
