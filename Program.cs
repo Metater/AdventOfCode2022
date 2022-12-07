@@ -2,5 +2,7 @@
 
 Console.WriteLine("Hello, World!");
 
-new Day4P1().RunWithInput(4);
-new Day4P2().RunWithInput(4);
+// Could add reflection inside of Day.cs to get day number from type name
+
+new Day4P1().RunWithInput(4, true);
+new Day4P2().RunWithInput(4, true);
