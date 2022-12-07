@@ -18,7 +18,7 @@ public class Day5P1 : Day
             for (int i = 0; i < amount; i++)
             {
                 toStack.Add(fromStack.Last());
-                fromStack.RemoveAt(fromStack.Length - 1);
+                fromStack.RemoveAt(fromStack.Count - 1);
             }
         }
 
