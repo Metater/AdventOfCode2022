@@ -4,19 +4,39 @@ public class Day5P1 : Day
 {
     public override void Run(List<string> input)
     {
+        var stacks = GetStacks(input);
+        
         var procedure = GetProcedure(input);
-        foreach (var instruction in procedure)
-        {
-            Console.WriteLine(instruction.crate);
-            Console.WriteLine(instruction.from);
-            Console.WriteLine(instruction.to);
-            Console.WriteLine();
-        }
     }
 
     private List<List<string>> GetStacks(List<string> input)
     {
-        return null;
+        List<List<string>> stacks = new();
+
+        bool hasStacksStarted = false;
+        foreach (var line in input.Reverse())
+        {
+            if (!hasStacksStarted)
+            {
+                if (string.IsNullOrEmpty(line))
+                {
+                    hasStacksStarted = true;
+                }
+
+                continue;
+            }
+
+            if (line.Trim()[0] == '1') // crate numbers
+            {
+                int crateCount = line.Split(' ', StringSplitOptions.TrimEntries & StringSplitOptions.RemoveEmptyEntries);
+                Console.WriteLine(crateCount);
+            }
+            else // crates
+            {
+
+            }
+        }
+        return stacks;
     }
 
     private List<(int crate, int from, int to)> GetProcedure(List<string> input)
