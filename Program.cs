@@ -4,5 +4,5 @@ Console.WriteLine("Hello, World!");
 
 // Could add reflection inside of Day.cs to get day number from type name
 
-new Day4P1().RunWithInput(4, true);
-new Day4P2().RunWithInput(4, true);
+new Day5P1().RunWithInput(5, true);
+new Day5P2().RunWithInput(5, true);
