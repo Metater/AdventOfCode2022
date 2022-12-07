@@ -7,6 +7,7 @@ public class Day4P1 : Day
         int count = 0;
         foreach (var line in input)
         {
+            Console.WriteLine(input);
             string[] pair = line.Split(',');
             string[] a = pair[0].Split('-');
             string[] b = pair[1].Split('-');
@@ -16,10 +17,12 @@ public class Day4P1 : Day
             int endB = int.Parse(b[1]);
             if (startA >= startB && endA >= endB) // Does A fully contain B?
             {
+                Console.WriteLine("A");
                 count++;
             }
             else if (startB >= startA && endB >= endA) // Does B fully contain A?
             {
+                Console.WriteLine("B");
                 count++;
             }
         }
