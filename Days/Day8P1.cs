@@ -54,7 +54,7 @@ public class Day8P1 : Day
                         if (tree > lastTree) // visible from outside of grid
                         {
                             lastTree = tree;
-                            visibleTrees.Add(tree);
+                            visibleTrees.Add((x, y));
                         }
                         if (tree == 9)
                         {
