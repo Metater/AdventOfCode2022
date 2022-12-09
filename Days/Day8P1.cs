@@ -69,7 +69,7 @@ public class Day8P1 : Day
         for (int x = 1; x < xLength - 1; x++)
         {
             var sweep = GetVisible(x, 0, 0, 1);
-            foreach ((int xx, int y) in sweep)
+            foreach ((int xx, int yy) in sweep)
             {
                 if (!IsAlreadyVisible(xx, yy))
                 {
@@ -91,7 +91,7 @@ public class Day8P1 : Day
             }
         }
 
-        Console.WriteLine(visibleTrees.Length);
+        Console.WriteLine(visibleTrees.Count);
         // Plus perimeter
 
         bool TryGetTree(int x, int y, out int tree)
