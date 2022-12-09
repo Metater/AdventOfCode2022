@@ -91,12 +91,35 @@ public class Day8P1 : Day
             }
         }
 
+        void AddIfNotAlreadyVisable(int x, int y)
+        {
+            if (!IsAlreadyVisible(x, y))
+            {
+                visibleTrees.Add((x, y));
+            }
+        }
+
+        /*
         Console.WriteLine(visibleTrees.Count);
         foreach ((int x, int y) in visibleTrees)
         {
             Console.WriteLine($"({x}, {y})");
         }
+        */
+
         // Plus perimeter
+        for (int x = 0; x < xLength; x++)
+        {
+            AddIfNotAlreadyVisable(x, 0);
+            AddIfNotAlreadyVisable(x, yLength - 1);
+        }
+        for (int y = 0; y < yLength; y++)
+        {
+            AddIfNotAlreadyVisable(0, y);
+            AddIfNotAlreadyVisable(xLength - 1, y);
+        }
+
+        Console.WriteLine(visibleTrees.Count);
 
         bool TryGetTree(int x, int y, out int tree)
         {
