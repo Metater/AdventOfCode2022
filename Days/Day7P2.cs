@@ -93,16 +93,32 @@ public class Day7P2 : Day
             }
         }
 
+        long totalUsedSpace = 0;
+        GetDirectorySize("/", ref totalUsedSpace);
+        long totalUnusedSpace = 70000000 - totalUsedSpace;
+        long spaceNeeded = 30000000 - totalUnusedSpace;
+        List<long> applicableDirs = new();
+        foreach ((var dir, var files) in directories)
+        {
+            long dirSize = 0;
+            GetDirectorySize(dir, ref dirSize);
+            if (dirSize >= spaceNeeded)
+            {
+                applicableDirs.Add(dirSize);
+            }
+        }
+        applicableDirs.Sort();
+        Console.WriteLine(applicableDirs[0]);
+
+        /*
         long sum = 0;
         foreach ((var dir, var files) in directories)
         {
-            //Console.WriteLine(dir);
-            /*
+            Console.WriteLine(dir);
             foreach ((var size, var name) in files)
             {
                 Console.WriteLine($"\t{name}: {size}");
             }
-            */
             long dirSize = 0;
             GetDirectorySize(dir, ref dirSize);
             if (dirSize <= 100000)
@@ -114,5 +130,6 @@ public class Day7P2 : Day
         long rootDirSize = 0;
         GetDirectorySize("/", ref rootDirSize);
         Console.WriteLine(rootDirSize);
+        */
     }
 }
