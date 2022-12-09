@@ -18,8 +18,8 @@ public class Day8P1 : Day
             }
         }
 
-        var trees = GetVisible(0, 0, 0, 1);
-        foreach ((int x, int y) in trees)
+        var test = GetVisible(0, 0, 0, 1);
+        foreach ((int x, int y) in test)
         {
             Console.WriteLine($"({x}, {y})");
         }
