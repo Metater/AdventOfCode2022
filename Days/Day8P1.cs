@@ -92,6 +92,10 @@ public class Day8P1 : Day
         }
 
         Console.WriteLine(visibleTrees.Count);
+        foreach ((int x, int y) in visibleTrees)
+        {
+            Console.WriteLine($"({x}, {y})");
+        }
         // Plus perimeter
 
         bool TryGetTree(int x, int y, out int tree)
