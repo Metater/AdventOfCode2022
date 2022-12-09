@@ -23,7 +23,7 @@ public class Day7P1 : Day
             var dir = directories[path];
             foreach ((int size, string name) in dir)
             {
-                if (size != -1)
+                if (size == -1)
                 {
                     if (path == "/")
                     {
