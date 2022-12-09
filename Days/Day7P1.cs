@@ -18,6 +18,21 @@ public class Day7P1 : Day
             return path;
         }
         Dictionary<string, List<(int size, string name)>> directories = new();
+        void GetDirectorySize(string path, ref long sum)
+        {
+            var dir = directories[path];
+            foreach ((int size, string name) in dir)
+            {
+                if (size != -1)
+                {
+                    GetDirectorySize($"{path}/name", ref sum);
+                }
+                else
+                {
+                    sum += size;
+                }
+            }
+        }
         foreach (var line in input)
         {
             if (line[0] == '$') // command
@@ -74,13 +89,23 @@ public class Day7P1 : Day
             }
         }
 
+        long sum = 0;
         foreach ((var dir, var files) in directories)
         {
-            Console.WriteLine(dir);
+            //Console.WriteLine(dir);
+            /*
             foreach ((var size, var name) in files)
             {
                 Console.WriteLine($"\t{name}: {size}");
             }
+            */
+            long size = 0;
+            GetDirectorySize(dir, ref size);
+            if (size <= 100000)
+            {
+                sum += size;
+            }
         }
+        Console.WriteLine(sum);
     }
 }
