@@ -12,7 +12,12 @@ public class Day7P1 : Day
         // cd /
         // ls
         Stack<string> pwd = new();
-        string GetCurrentPath() => string.Join('/', pwd);
+        string GetCurrentPath()
+        {
+            var arr = pwd.ToArray();
+            arr.Reverse();
+            string path = $"/{string.Join('/', arr)}";
+        }
         Dictionary<string, List<(int size, string name)>> directories = new();
         foreach (var line in input)
         {
