@@ -9,13 +9,20 @@ public class Day8P1 : Day
         int xLength = input[0].Length;
         int yLength = input.Count;
         int[,] trees = new int[xLength, yLength];
-        for (int y = 0; y < yLength - 1; y++)
+        for (int y = 0; y < yLength; y++)
         {
-            for (int x = 0; x < xLength - 1; x++)
+            string line = input[y];
+            for (int x = 0; x < xLength; x++)
             {
-                Console.Write("0");
+                trees[x, y] = int.Parse(line[x].ToString());
             }
-            Console.WriteLine();
+        }
+
+        // Start at a position and iterate by iX and iY, looking for trees taller than the last
+        // Returns position of that tree
+        (int x, int y) GetVisible(int x, int y, int iX, int iY)
+        {
+            
         }
     }
 }
