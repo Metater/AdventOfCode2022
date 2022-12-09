@@ -25,6 +25,10 @@ public class Day7P1 : Day
             {
                 if (size != -1)
                 {
+                    if (path == "/")
+                    {
+                        path = "";
+                    }
                     GetDirectorySize($"{path}/{name}", ref sum);
                 }
                 else
