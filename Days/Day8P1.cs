@@ -43,11 +43,11 @@ public class Day8P1 : Day
         for (int y = 1; y < yLength - 1; y++)
         {
             var sweep = GetVisible(0, y, 1, 0);
-            foreach ((int x, int y) in sweep)
+            foreach ((int xx, int yy) in sweep)
             {
-                if (!IsAlreadyVisible(x, y))
+                if (!IsAlreadyVisible(xx, yy))
                 {
-                    visibleTrees.Add((x, y));
+                    visibleTrees.Add((xx, yy));
                 }
             }
         }
@@ -56,11 +56,11 @@ public class Day8P1 : Day
         for (int y = 1; y < yLength - 1; y++)
         {
             var sweep = GetVisible(xLength - 1, y, -1, 0);
-            foreach ((int x, int y) in sweep)
+            foreach ((int xx, int yy) in sweep)
             {
-                if (!IsAlreadyVisible(x, y))
+                if (!IsAlreadyVisible(xx, yy))
                 {
-                    visibleTrees.Add((x, y));
+                    visibleTrees.Add((xx, yy));
                 }
             }
         }
@@ -69,11 +69,11 @@ public class Day8P1 : Day
         for (int x = 1; x < xLength - 1; x++)
         {
             var sweep = GetVisible(x, 0, 0, 1);
-            foreach ((int x, int y) in sweep)
+            foreach ((int xx, int y) in sweep)
             {
-                if (!IsAlreadyVisible(x, y))
+                if (!IsAlreadyVisible(xx, yy))
                 {
-                    visibleTrees.Add((x, y));
+                    visibleTrees.Add((xx, yy));
                 }
             }
         }
@@ -82,11 +82,11 @@ public class Day8P1 : Day
         for (int x = 1; x < xLength - 1; x++)
         {
             var sweep = GetVisible(x, yLength - 1, 0, -1);
-            foreach ((int x, int y) in sweep)
+            foreach ((int xx, int yy) in sweep)
             {
-                if (!IsAlreadyVisible(x, y))
+                if (!IsAlreadyVisible(xx, yy))
                 {
-                    visibleTrees.Add((x, y));
+                    visibleTrees.Add((xx, yy));
                 }
             }
         }
