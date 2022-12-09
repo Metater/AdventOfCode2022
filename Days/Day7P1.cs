@@ -101,11 +101,11 @@ public class Day7P1 : Day
             {
                 Console.WriteLine($"\t{name}: {size}");
             }
-            long size = 0;
-            GetDirectorySize(dir, ref size);
-            if (size <= 100000)
+            long dirSize = 0;
+            GetDirectorySize(dir, ref dirSize);
+            if (dirSize <= 100000)
             {
-                sum += size;
+                sum += dirSize;
             }
         }
         Console.WriteLine(sum);
