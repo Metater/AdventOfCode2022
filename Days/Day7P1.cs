@@ -14,7 +14,7 @@ public class Day7P1 : Day
         Stack<string> pwd = new();
         string GetCurrentPath()
         {
-            string path = $"/{string.Join('/', pwd.ToArray())}";
+            string path = $"/{string.Join('/', new Stack<string>(pwd))}";
             return path;
         }
         Dictionary<string, List<(int size, string name)>> directories = new();
