@@ -61,6 +61,9 @@ public class Day8P1 : Day
                             return visibleTrees;
                         }
                     }
+
+                    x += iX;
+                    y += iY;
                 }
                 else
                 {
