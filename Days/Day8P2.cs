@@ -26,7 +26,7 @@ public class Day8P2 : Day
         }
         */
         {
-            int score = GetScenicScore(2, 0, 0, 1);
+            int score = GetScenicScore(2, 0, 0, -1);
             Console.WriteLine(score);
         }
         {
