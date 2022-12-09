@@ -36,10 +36,12 @@ public class Day8P2 : Day
             Console.WriteLine(l);
             int r = GetScenicScore(x, y, 1, 0);
             Console.WriteLine(r);
-            Console.WriteLine("---------");
             return u * d * l * r;
         }
 
+        GetScenicScore4(2, 1);
+
+        /*
         List<int> scores = new();
         for (int y = 0; y < yLength; y++)
         {
@@ -49,11 +51,8 @@ public class Day8P2 : Day
             }
         }
         scores.Sort();
-        foreach (var score in scores)
-        {
-            Console.WriteLine(score);
-        }
         Console.WriteLine(scores[scores.Count - 1]);
+        */
 
         bool TryGetTree(int x, int y, out int tree)
         {
