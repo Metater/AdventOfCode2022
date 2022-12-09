@@ -49,7 +49,7 @@ public class Day8P2 : Day
         // Returns iterations until view is blocked
         int GetScenicScore(int x, int y, int iX, int iY)
         {
-            int i = -1;
+            int i = 0;
             int lastTree = -1;
             while (true)
             {
@@ -67,7 +67,7 @@ public class Day8P2 : Day
                     {
                         if (tree < lastTree) // visible from outside of grid
                         {
-                            return i;
+                            return i - 1;
                         }
                         else
                         {
@@ -75,7 +75,7 @@ public class Day8P2 : Day
                         }
                         if (tree == 9)
                         {
-                            return i;
+                            return i - 1;
                         }
                     }
                 }
