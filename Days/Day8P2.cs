@@ -29,9 +29,14 @@ public class Day8P2 : Day
         int GetScenicScore4(int x, int y)
         {
             int u = GetScenicScore(x, y, 0, -1);
+            Console.WriteLine(u);
             int d = GetScenicScore(x, y, 0, 1);
+            Console.WriteLine(d);
             int l = GetScenicScore(x, y, -1, 0);
+            Console.WriteLine(l);
             int r = GetScenicScore(x, y, 1, 0);
+            Console.WriteLine(r);
+            Console.WriteLine("---------");
             return u * d * l * r;
         }
 
