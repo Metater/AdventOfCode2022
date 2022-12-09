@@ -36,7 +36,12 @@ public class Day8P2 : Day
             //Console.WriteLine(l);
             int r = GetScenicScore(x, y, 1, 0);
             //Console.WriteLine(r);
-            return u * d * l * r;
+            int score = u * d * l * r;
+            if (score == 12)
+            {
+                Console.WriteLine($"({x}, {y}");
+            }
+            return score;
         }
 
         //GetScenicScore4(2, 1);
