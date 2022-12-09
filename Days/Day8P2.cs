@@ -44,7 +44,7 @@ public class Day8P2 : Day
             }
         }
         scores.Sort();
-        Console.WriteLine(scores[scores.Length - 1]);
+        Console.WriteLine(scores[scores.Count - 1]);
 
         bool TryGetTree(int x, int y, out int tree)
         {
