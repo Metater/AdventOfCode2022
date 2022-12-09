@@ -33,8 +33,8 @@ public class Day7P1 : Day
                             pwd.Clear();
                             break;
                         case "..":
-                            break;
                             pwd.Pop();
+                            break;
                         default:
                             pwd.Push(words[2]);
                             break;
