@@ -89,6 +89,11 @@ public class Day8P2 : Day
                         {
                             return i;
                         }
+                        else
+                        {
+                            i++;
+                            lastTree = tree;
+                        }
                         if (tree == 9)
                         {
                             return i;
