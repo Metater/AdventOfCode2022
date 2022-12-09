@@ -34,6 +34,21 @@ public class Day7P1 : Day
                             pwd.Pop();
                             break;
                         default:
+                            // Add dir file list just have size -1 to mark
+                            directories.TryAdd(GetCurrentPath(), new());
+                            var directory = directories[GetCurrentPath()];
+                            bool contains = false;
+                            foreach (var file in directory)
+                            {
+                                if (file.size = -1 && file.name == words[2])
+                                {
+                                    contains = true;
+                                }
+                            }
+                            if (!contains)
+                            {
+                                directory.Add((-1, words[2]))
+                            }
                             pwd.Push(words[2]);
                             break;
                     }
