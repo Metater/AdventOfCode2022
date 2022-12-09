@@ -17,6 +17,7 @@ public class Day7P1 : Day
             var arr = pwd.ToArray();
             arr.Reverse();
             string path = $"/{string.Join('/', arr)}";
+            return path;
         }
         Dictionary<string, List<(int size, string name)>> directories = new();
         foreach (var line in input)
