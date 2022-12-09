@@ -25,9 +25,14 @@ public class Day8P2 : Day
             Console.WriteLine($"({x}, {y})");
         }
         */
-
-        int score = GetScenicScore(2, 0, 0, 1);
+        {
+                    int score = GetScenicScore(2, 0, 0, 1);
         Console.WriteLine(score);
+        }
+        {
+                    int score = GetScenicScore(2, 1, 0, 1);
+        Console.WriteLine(score);
+        }
 
         bool TryGetTree(int x, int y, out int tree)
         {
@@ -44,7 +49,7 @@ public class Day8P2 : Day
         // Returns iterations until view is blocked
         int GetScenicScore(int x, int y, int iX, int iY)
         {
-            int i = 0;
+            int i = -1;
             int lastTree = -1;
             while (true)
             {
