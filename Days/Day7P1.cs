@@ -47,7 +47,7 @@ public class Day7P1 : Day
                             }
                             if (!contains)
                             {
-                                directory.Add((-1, words[2]))
+                                directory.Add((-1, words[2]));
                             }
                             pwd.Push(words[2]);
                             break;
