@@ -8,7 +8,7 @@ public class Day8P1 : Day
         // Heights of trees is input
         int xLength = input[0].Length;
         int yLength = input.Length;
-        int[,] trees = new[xLength, yLength];
+        int[,] trees = new int[xLength, yLength];
         for (int y = 0; y < yLength - 1; y++)
         {
             for (int x = 0; x < xLength - 1; x++)
