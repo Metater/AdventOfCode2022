@@ -111,7 +111,7 @@ public class Day7P2 : Day
             }
         }
         Console.WriteLine(sum);
-        int rootDirSize = 0;
+        long rootDirSize = 0;
         GetDirectorySize("/", ref rootDirSize);
         Console.WriteLine(rootDirSize);
     }
