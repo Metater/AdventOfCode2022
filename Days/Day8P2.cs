@@ -26,12 +26,12 @@ public class Day8P2 : Day
         }
         */
         {
-                    int score = GetScenicScore(2, 0, 0, 1);
-        Console.WriteLine(score);
+            int score = GetScenicScore(2, 0, 0, 1);
+            Console.WriteLine(score);
         }
         {
-                    int score = GetScenicScore(2, 1, 0, 1);
-        Console.WriteLine(score);
+            int score = GetScenicScore(2, 1, 0, 1);
+            Console.WriteLine(score);
         }
 
         bool TryGetTree(int x, int y, out int tree)
