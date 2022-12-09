@@ -29,19 +29,18 @@ public class Day8P2 : Day
         int GetScenicScore4(int x, int y)
         {
             int u = GetScenicScore(x, y, 0, -1);
-            Console.WriteLine(u);
+            //Console.WriteLine(u);
             int d = GetScenicScore(x, y, 0, 1);
-            Console.WriteLine(d);
+            //Console.WriteLine(d);
             int l = GetScenicScore(x, y, -1, 0);
-            Console.WriteLine(l);
+            //Console.WriteLine(l);
             int r = GetScenicScore(x, y, 1, 0);
-            Console.WriteLine(r);
+            //Console.WriteLine(r);
             return u * d * l * r;
         }
 
-        GetScenicScore4(2, 1);
+        //GetScenicScore4(2, 1);
 
-        /*
         List<int> scores = new();
         for (int y = 0; y < yLength; y++)
         {
@@ -52,7 +51,6 @@ public class Day8P2 : Day
         }
         scores.Sort();
         Console.WriteLine(scores[scores.Count - 1]);
-        */
 
         bool TryGetTree(int x, int y, out int tree)
         {
