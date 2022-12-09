@@ -25,14 +25,26 @@ public class Day8P2 : Day
             Console.WriteLine($"({x}, {y})");
         }
         */
+
+        int GetScenicScore4(int x, int y)
         {
-            int score = GetScenicScore(2, 0, 0, -1);
-            Console.WriteLine(score);
+            int u = GetScenicScore(x, y, 0, -1);
+            int d = GetScenicScore(x, y, 0, 1);
+            int l = GetScenicScore(x, y, -1, 0);
+            int r = GetScenicScore(x, y, 1, 0);
+            return u * d * l * r;
         }
+
+        List<int> scores = new();
+        for (int y = 0; y < yLength; y++)
         {
-            int score = GetScenicScore(2, 1, 0, 1);
-            Console.WriteLine(score);
+            for (int x = 0; x < xLength; x++)
+            {
+                scores.Add(GetScenicScore4(x, y));
+            }
         }
+        scores.Sort();
+        Console.WriteLine(scores[scores.Length - 1]);
 
         bool TryGetTree(int x, int y, out int tree)
         {
