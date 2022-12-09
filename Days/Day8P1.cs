@@ -7,7 +7,7 @@ public class Day8P1 : Day
         // Trees in grid
         // Heights of trees is input
         int xLength = input[0].Length;
-        int yLength = input.Length;
+        int yLength = input.Count;
         int[,] trees = new int[xLength, yLength];
         for (int y = 0; y < yLength - 1; y++)
         {
