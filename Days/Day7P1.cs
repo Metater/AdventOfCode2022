@@ -40,7 +40,7 @@ public class Day7P1 : Day
                             bool contains = false;
                             foreach (var file in directory)
                             {
-                                if (file.size = -1 && file.name == words[2])
+                                if (file.size == -1 && file.name == words[2])
                                 {
                                     contains = true;
                                 }
