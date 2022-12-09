@@ -25,7 +25,7 @@ public class Day7P1 : Day
             {
                 if (size != -1)
                 {
-                    GetDirectorySize($"{path}/name", ref sum);
+                    GetDirectorySize($"{path}/{name}", ref sum);
                 }
                 else
                 {
