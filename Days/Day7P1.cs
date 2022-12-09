@@ -12,12 +12,8 @@ public class Day7P1 : Day
         // cd /
         // ls
         Stack<string> pwd = new();
-        pwd.Push("test");
-        pwd.Push("gaming");
-        pwd.Push("hello");
         string GetCurrentPath() => string.Join('/', pwd);
-        Console.WriteLine(GetCurrentPath());
-        Dictionary<string, int> files = new();
+        Dictionary<string, List<(int size, string name)>> directories = new();
         foreach (var line in input)
         {
             if (line[0] == '$') // command
@@ -34,8 +30,10 @@ public class Day7P1 : Day
                             break;
                             pwd.Pop();
                         default:
+                            pwd.Push(words[2]);
                             break;
                     }
+                    directories.TryAdd(GetCurrentPath(), new());
                 }
                 else // ls
                 {
@@ -47,12 +45,22 @@ public class Day7P1 : Day
                 char first = line[0];
                 if (char.IsDigit(first)) // is a file
                 {
-
+                    string[] file = line.Split(' ');
+                    directories[GetCurrentPath()].Add((int.Parse(file[0]), file[1]));
                 }
                 else // is a directory
                 {
                     // ignore existance for now, only matters when in directory
                 }
+            }
+        }
+
+        foreach ((var dir, var files) in directories)
+        {
+            Console.WriteLine(dir);
+            foreach (var (var size, var name) in files)
+            {
+                Console.WriteLine($"\t{name}: {size}");
             }
         }
     }
