@@ -37,10 +37,12 @@ public class Day8P2 : Day
             int r = GetScenicScore(x, y, 1, 0);
             //Console.WriteLine(r);
             int score = u * d * l * r;
+            /*
             if (score == 12)
             {
-                Console.WriteLine($"({x}, {y}");
+                Console.WriteLine($"({x}, {y})");
             }
+            */
             return score;
         }
 
@@ -55,11 +57,13 @@ public class Day8P2 : Day
             }
         }
         scores.Sort();
+        /*
         foreach (var score in scores)
         {
             Console.WriteLine(score);
         }
-        //Console.WriteLine(scores[scores.Count - 1]);
+        */
+        Console.WriteLine(scores[scores.Count - 2]);
 
         bool TryGetTree(int x, int y, out int tree)
         {
