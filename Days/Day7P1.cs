@@ -96,13 +96,11 @@ public class Day7P1 : Day
         long sum = 0;
         foreach ((var dir, var files) in directories)
         {
-            //Console.WriteLine(dir);
-            /*
+            Console.WriteLine(dir);
             foreach ((var size, var name) in files)
             {
                 Console.WriteLine($"\t{name}: {size}");
             }
-            */
             long size = 0;
             GetDirectorySize(dir, ref size);
             if (size <= 100000)
