@@ -61,21 +61,16 @@ public class Day8P2 : Day
                     if (lastTree == -1) // first cycle
                     {
                         lastTree = tree;
-                        i++;
                     }
                     else // not first cycle
                     {
                         if (tree < lastTree) // visible from outside of grid
                         {
-                            return i - 1;
-                        }
-                        else
-                        {
-                            i++;
+                            return i;
                         }
                         if (tree == 9)
                         {
-                            return i - 1;
+                            return i;
                         }
                     }
                 }
@@ -83,6 +78,7 @@ public class Day8P2 : Day
                 {
                     return i;
                 }
+                i++;
             }
         }
     }
