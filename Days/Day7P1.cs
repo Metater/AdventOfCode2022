@@ -58,7 +58,7 @@ public class Day7P1 : Day
         foreach ((var dir, var files) in directories)
         {
             Console.WriteLine(dir);
-            foreach (var (var size, var name) in files)
+            foreach ((var size, var name) in files)
             {
                 Console.WriteLine($"\t{name}: {size}");
             }
