@@ -63,7 +63,7 @@ public class Day8P2 : Day
             Console.WriteLine(score);
         }
         */
-        Console.WriteLine(scores[scores.Count - 2]);
+        Console.WriteLine(scores[scores.Count - 1]);
 
         bool TryGetTree(int x, int y, out int tree)
         {
