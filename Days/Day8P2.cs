@@ -103,10 +103,6 @@ public class Day8P2 : Day
                             i++;
                             lastTree = tree;
                         }
-                        if (tree == 9)
-                        {
-                            return i;
-                        }
                     }
                 }
                 else
