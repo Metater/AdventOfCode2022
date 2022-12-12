@@ -29,20 +29,18 @@ public class Day8P2 : Day
         int GetScenicScore4(int x, int y)
         {
             int u = GetScenicScore(x, y, 0, -1);
-            //Console.WriteLine(u);
+            Console.WriteLine(u);
             int d = GetScenicScore(x, y, 0, 1);
-            //Console.WriteLine(d);
+            Console.WriteLine(d);
             int l = GetScenicScore(x, y, -1, 0);
-            //Console.WriteLine(l);
+            Console.WriteLine(l);
             int r = GetScenicScore(x, y, 1, 0);
-            //Console.WriteLine(r);
+            Console.WriteLine(r);
             int score = u * d * l * r;
-            /*
             if (score == 12)
             {
                 Console.WriteLine($"({x}, {y})");
             }
-            */
             return score;
         }
 
