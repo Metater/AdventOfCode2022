@@ -47,7 +47,7 @@ public class Day9P1 : Day
             }
         }
         Console.WriteLine(occupied.Count);
-        foreach (var (int x, int y) in occupied)
+        foreach ((int x, int y) in occupied)
         {
             Console.WriteLine($"({x}, {y})");
         }
