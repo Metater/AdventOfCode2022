@@ -45,7 +45,6 @@ public class Day9P1 : Day
                     }
                     break;
             }
-            occupied.Add(tail);
         }
         Console.WriteLine(occupied.Count);
         foreach ((int x, int y) in occupied)
@@ -60,14 +59,14 @@ public class Day9P1 : Day
         (int x, int y) diff = Diff;
         if (Math.Abs(diff.x) > 1)
         {
-            int sign = diff.x / diff.x;
+            int sign = diff.x / Math.Abs(diff.x);
             tail = (tail.x + sign, tail.y);
         }
         if (Math.Abs(diff.y) > 1)
         {
-            int sign = diff.y / diff.y;
+            int sign = diff.y / Math.Abs(diff.y);
             tail = (tail.x, tail.y + sign);
         }
-        //occupied.Add(tail);
+        occupied.Add(tail);
     }
 }
