@@ -60,12 +60,12 @@ public class Day9P1 : Day
         if (Math.Abs(diff.x) > 1)
         {
             int sign = diff.x / Math.Abs(diff.x);
-            tail = (tail.x + sign, tail.y);
+            tail = (tail.x - sign, tail.y);
         }
         if (Math.Abs(diff.y) > 1)
         {
             int sign = diff.y / Math.Abs(diff.y);
-            tail = (tail.x, tail.y + sign);
+            tail = (tail.x, tail.y - sign);
         }
         occupied.Add(tail);
     }
