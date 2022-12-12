@@ -85,7 +85,7 @@ public class Day8P2 : Day
                 x += iX;
                 y += iY;
                 
-                if (TryGetTree(iX, iY, out int tree))
+                if (TryGetTree(x, y, out int tree))
                 {
                     if (lastTree == -1) // first cycle
                     {
@@ -94,7 +94,7 @@ public class Day8P2 : Day
                     }
                     else // not first cycle
                     {
-                        if (tree < lastTree) // visible from outside of grid
+                        if (tree >= lastTree) // visible from outside of grid
                         {
                             return i;
                         }
