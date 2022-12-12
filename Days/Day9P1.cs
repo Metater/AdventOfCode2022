@@ -6,7 +6,7 @@ public class Day9P1 : Day
     (int x, int y) tail = (0, 0);
 
     // Relative offset to move tail to head
-    (int x, int y) Diff => (head.x - tail.x, head.y - tail.y);
+    (int x, int y) Diff => (tail.x - head.x, tail.y - head.y);
 
     HashSet<(int x, int y)> occupied = new();
 
@@ -60,12 +60,12 @@ public class Day9P1 : Day
         if (Math.Abs(diff.x) > 1)
         {
             int sign = diff.x / diff.x;
-            tail = (tail.x - sign, tail.y);
+            tail = (tail.x + sign, tail.y);
         }
         if (Math.Abs(diff.y) > 1)
         {
             int sign = diff.y / diff.y;
-            tail = (tail.x, tail.y - sign);
+            tail = (tail.x, tail.y + sign);
         }
         occupied.Add(tail);
     }
