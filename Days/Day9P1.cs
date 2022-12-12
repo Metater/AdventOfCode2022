@@ -45,6 +45,7 @@ public class Day9P1 : Day
                     }
                     break;
             }
+            occupied.Add(tail);
         }
         Console.WriteLine(occupied.Count);
         foreach ((int x, int y) in occupied)
@@ -67,6 +68,6 @@ public class Day9P1 : Day
             int sign = diff.y / diff.y;
             tail = (tail.x, tail.y + sign);
         }
-        occupied.Add(tail);
+        //occupied.Add(tail);
     }
 }
