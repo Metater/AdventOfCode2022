@@ -94,7 +94,7 @@ public class Day8P2 : Day
                     }
                     else // not first cycle
                     {
-                        if (tree >= lastTree) // visible from outside of grid
+                        if (tree > lastTree) // visible from outside of grid
                         {
                             return i;
                         }
