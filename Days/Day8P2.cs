@@ -81,10 +81,7 @@ public class Day8P2 : Day
             int i = 0;
             int lastTree = -1;
             while (true)
-            {
-                x += iX;
-                y += iY;
-                
+            {   
                 if (TryGetTree(x, y, out int tree))
                 {
                     if (lastTree == -1) // first cycle
@@ -109,6 +106,9 @@ public class Day8P2 : Day
                 {
                     return i;
                 }
+
+                x += iX;
+                y += iY;
             }
         }
     }
